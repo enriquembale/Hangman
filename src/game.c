@@ -59,9 +59,8 @@ const char *hangman_pics[] = {
 
 // Prints "_" for each letter in the word and fills in the letters that have been guessed correctly.
 bool update_letter_slots(char *random_word, char *user_word, char *letter_slots) {
-    bool found = false;
     for (int i = 0; i < strlen(random_word); i++) {
-
+        bool found = false;
         for (int j = 0; j < strlen(user_word); j++) {
             if (user_word[j] == random_word[i]) {
                 letter_slots[i] = random_word[i];
