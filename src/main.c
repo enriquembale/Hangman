@@ -1,11 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
 #include "wordlist.h"
 #include "game.h"
-#include <string.h>
+
 
 int main(void) {
+    srand((unsigned)time(NULL));
+
     char play_again[10];
-    printf("Welcome to Hangman!\n\n");
+    
 
     do {
         start_game();
@@ -16,8 +21,9 @@ int main(void) {
         } else {
             play_again[0] = '\0';
         }
+        
     } while (strcmp(play_again, "y") == 0 || strcmp(play_again, "Y") == 0);
 
-    printf("Thanks for playing my game!\n");
+    printf("\nThank you for playing my game!\n");
     return 0;
 }

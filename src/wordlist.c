@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 #include "wordlist.h"
+#define MAX_WORD_LENGTH 100
 
 char *get_random_word(char *word) {
-    srand((unsigned)time(NULL));
 
     FILE *file_ptr = fopen("wordlist.txt", "r");
     if (file_ptr == NULL) {
@@ -13,7 +12,7 @@ char *get_random_word(char *word) {
         return NULL;
     }
 
-    char buffer[100];
+    char buffer[MAX_WORD_LENGTH];
     int line_count = 0;
     while (fgets(buffer, sizeof(buffer), file_ptr) != NULL) {
         line_count++;
