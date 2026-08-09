@@ -4,9 +4,9 @@ A simple command-line Hangman game written in C.
 
 ## Future plans
 
-* Keep track of guessed letters
-* Warn when the user repeats a guess
-* Show incorrect letters already guessed
+* Keep track of guessed letters - [x] 
+* Warn when the user repeats a guess - [x] 
+* Show incorrect letters already guessed - [x] 
 * Add difficulty levels (easy/medium/hard wordlist.txt)
 * Display the number of letters remaining
 * Add a scoring system
