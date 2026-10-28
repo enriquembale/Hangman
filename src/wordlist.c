@@ -6,9 +6,9 @@
 
 char *get_random_word(char *word) {
 
-    FILE *file_ptr = fopen("wordlist.txt", "r");
+    FILE *file_ptr = fopen("../data/wordlist.txt", "r");
     if (file_ptr == NULL) {
-        printf("Error: Could not open file.\n");
+        printf("Error: Could not open file. Make sure it is in the data folder.\n");
         return NULL;
     }
 

@@ -136,11 +136,11 @@ void clear(void) {
 
 
 void start_game(void) {
-    char random_word[MAX_LENGTH] = "breeze";
+    char random_word[MAX_LENGTH];
     char guess[MAX_LENGTH];
     guess[0] = '\0';
 
-    //get_random_word(random_word);
+    get_random_word(random_word);
     int word_length = strlen(random_word);
     char letter_slots[word_length + 1];
     char guessed_letters[26] = {0}; 
@@ -152,7 +152,7 @@ void start_game(void) {
     printf("Welcome to Hangman!\n\n");
 
     while (1) {
-        
+     
         printf("%s\n\n", hangman_pics[6 - lives]);
 
         printf("Lives: %d\n", lives);
